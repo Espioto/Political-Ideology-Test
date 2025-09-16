@@ -19,6 +19,9 @@ export default defineConfig(({ mode }) => {
       server: {
         fs: {
           strict: false
+        },
+        headers: {
+          'Content-Type': 'application/javascript'
         }
       },
       build: {
@@ -28,9 +31,13 @@ export default defineConfig(({ mode }) => {
         minify: 'esbuild',
         rollupOptions: {
           output: {
-            manualChunks: undefined
+            manualChunks: undefined,
+            format: 'es'
           }
         }
+      },
+      esbuild: {
+        target: 'es2022'
       }
     };
 });

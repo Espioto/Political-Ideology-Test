@@ -1,0 +1,18 @@
+# Ensure proper MIME types for JavaScript modules
+<Files "*.js">
+    Header set Content-Type "application/javascript"
+</Files>
+
+# Ensure proper MIME types for TypeScript files (if any are served)
+<Files "*.ts">
+    Header set Content-Type "application/javascript"
+</Files>
+
+<Files "*.tsx">
+    Header set Content-Type "application/javascript"
+</Files>
+
+# Enable CORS for module scripts
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Methods "GET, POST, OPTIONS"
+Header always set Access-Control-Allow-Headers "Content-Type"
