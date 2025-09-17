@@ -34,7 +34,8 @@ export default defineConfig(({ mode }) => {
             manualChunks: undefined,
             format: 'es'
           }
-        }
+        },
+        copyPublicDir: true
       },
       esbuild: {
         target: 'es2022'
