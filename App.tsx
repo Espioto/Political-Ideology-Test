@@ -186,9 +186,20 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 flex items-center justify-center p-4 font-sans">
-      <div className="w-full max-w-4xl mx-auto">
-        {renderContent()}
+    <div className="min-h-screen bg-gray-900 text-gray-100 font-sans">
+      {/* Topbar */}
+      <div className="bg-gray-800 border-b border-gray-700 py-4 px-6">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-2xl font-bold text-white text-center">The Political Ideology Test</h1>
+          <p className="text-sm text-gray-400 text-center mt-1">By: Mason Smith</p>
+        </div>
+      </div>
+      
+      {/* Main Content */}
+      <div className="flex items-center justify-center p-4 min-h-[calc(100vh-80px)]">
+        <div className="w-full max-w-4xl mx-auto">
+          {renderContent()}
+        </div>
       </div>
     </div>
   );
